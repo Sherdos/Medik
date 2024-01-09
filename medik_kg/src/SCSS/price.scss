@@ -1,0 +1,26 @@
+.price{
+    padding: 50px 0;
+    h2{
+        color: rgb(11, 74, 33);
+        font-size: 40px;
+        font-family: "Montserrat", Arial, sans-serif;
+        font-weight: 600;
+        text-align: center;
+        padding: 40px 0;
+    }
+    ul{
+        li:nth-child(1){
+            border-top: 2px solid rgb(11, 74, 33);
+        }
+        li{
+            display: flex;
+            justify-content: space-between;
+            padding: 20px 0 ;
+            color: rgb(11, 74, 33);
+            font-size: 18px;
+            font-family: "Montserrat", Arial, sans-serif;
+            font-weight: 600;
+            border-bottom: 2px solid rgb(11, 74, 33);
+        }
+    }
+}

@@ -1,0 +1,27 @@
+.banner {
+  background-image: url(../images/banner/1.jpeg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 700px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  &__content {
+    h1 {
+      font-size: 48px;
+      font-family: "Montserrat";
+      font-weight: 700;
+      margin-bottom: 30px;
+      color: white;
+    }
+    h3 {
+      font-size: 28px;
+      font-family: "Montserrat";
+      font-weight: 700;
+      margin-bottom: 30px;
+      color: white;
+    }
+  }
+}

@@ -1,0 +1,45 @@
+.slider {  
+    #slider__content{
+        height: 100vh;
+       display: flex;
+       flex-direction: column;
+       align-items: center;
+       justify-content: center;
+    }
+    img{
+        height: 700px;
+        object-fit: cover;
+    }
+  h2 {
+    font-size: 48px;
+    font-family: "Montserrat";
+    font-weight: 700;
+    margin-bottom: 30px;
+  }
+  p {
+    font-size: 28px;
+    font-family: "Montserrat";
+    font-weight: 500;
+    color: white;
+    margin-bottom: 30px;
+  }
+  .slider__btn {
+    padding: 20px 60px;
+    border: 0px solid #ffffff;
+    background-color: #0b4a21;
+    border-radius: 30px;
+  }
+  .slider__btn a{
+    font-size: 16px;
+    font-weight: 700;
+    font-family: "Montserrat";
+    color: #ffffff;
+  }
+  .carousel-control-prev-icon , .carousel-control-next-icon{
+    width: 30px;
+    height: 30px;
+    background-color: rgb(21, 19, 19);
+    margin-top: 0px;
+    border-radius: 50%;
+  }
+}

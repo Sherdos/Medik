@@ -1,0 +1,57 @@
+.consultation {
+  background: none;
+  background-image: -webkit-linear-gradient(
+    top,
+    rgba(0, 0, 0, 0.7),
+    rgba(0, 0, 0, 0.8)
+  );
+  &__background {
+    background-image: url(https://thumb.tildacdn.com/tild3264-3462-4639-b130-626538366332/-/format/webp/__2021-11-12__103809.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 560px;
+    position: fixed;
+    z-index: -1;
+    width: 100%;
+    top: 185px;
+    left: 0;
+  }
+  &__content {
+    opacity: 0.7;
+    height: 560px;
+    padding: 52px 0 42px;
+    text-align: center;
+    background: none;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    h2 {
+      color: #fff;
+      font-size: 30px;
+      font-family: "Montserrat", Arial, sans-serif;
+      font-weight: 600;
+      text-align: center;
+      margin-bottom: 25px;
+    }
+    p {
+      color: #fff;
+      font-size: 22px;
+      font-family: "Montserrat", Arial, sans-serif;
+      font-weight: 600;
+      text-align: center;
+      margin-bottom: 35px;
+    }
+    button {
+      color: #ffffff;
+      background-color: #7a7a7a;
+      border-radius: 5px;
+      padding: 20px 60px;
+      border: none;
+      font-size: 16px;
+      font-family: "Montserrat", Arial, sans-serif;
+      font-weight: 600;
+      text-align: center;
+    }
+  }
+}

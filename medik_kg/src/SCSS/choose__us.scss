@@ -1,0 +1,37 @@
+.choose__us{
+    padding: 30px 0;
+    background-color:#f5f5f5;
+    &__title{
+        margin-bottom: 70px;
+        color: rgb(11, 74, 33);
+        font-size: 40px;
+        font-family: 'Montserrat',Arial,sans-serif;
+        font-weight: 600;
+        text-align: center;
+    }
+    &__cards{
+        text-align: center;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        row-gap: 100px;
+        div{
+            width: 33%;
+        }
+        h3{
+            color: rgb(11, 74, 33);
+            font-size: 28px;
+            font-family: 'Montserrat',Arial,sans-serif;
+            font-weight: 600;
+            text-align: center;
+        }
+        p{
+            color: #0b4a21;
+            margin-top: 30px;
+            font-size: 16px;
+            font-family: 'Montserrat',Arial,sans-serif;
+            text-align: center;
+            padding-right: 50px;
+          }
+    }
+}

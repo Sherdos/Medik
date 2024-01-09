@@ -1,0 +1,64 @@
+.about {
+    padding: 45px;
+    background: white;
+  &__content {
+    display: flex;
+    flex-wrap: wrap;
+    &__left {
+      width: 50%;
+      padding: 20px;
+      h2 {
+        font-size: 40px;
+        color: rgb(110, 110, 110);
+        font-family: 'Montserrat',Arial,sans-serif;
+        font-weight: 600;
+        padding: 45px 0;
+      }
+      p{
+        color: #0b4a21;
+        margin-top: 30px;
+        font-size: 20px;
+        font-family: 'Montserrat',Arial,sans-serif;
+        text-align: justify;
+        padding-right: 50px;
+      }
+    }
+    &__right {
+      width: 50%;
+      &__images {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        gap: 10px;
+        .one {
+          background-image: url(https://thumb.tildacdn.com/tild3862-3932-4266-b261-663663643439/-/cover/264x264/center/center/-/format/webp/__2021-11-12__103729.png);
+          height: 290px;
+          width: calc(50% - 10px);
+          background-repeat: no-repeat;
+          background-size: cover;
+        }
+        .two {
+          background-image: url(https://thumb.tildacdn.com/tild3633-3830-4539-b666-363264313030/-/cover/264x264/center/center/-/format/webp/__2021-11-12__103745.png);
+          height: 290px;
+          width: calc(50% - 10px);
+          background-repeat: no-repeat;
+          background-size: cover;
+        }
+        .three {
+          background-image: url(https://thumb.tildacdn.com/tild6131-3534-4463-a635-616134613733/-/cover/264x264/center/center/-/format/webp/__2021-11-12__103757.png);
+          height: 290px;
+          width: calc(50% - 10px);
+          background-repeat: no-repeat;
+          background-size: cover;
+        }
+        .four {
+          background-image: url(https://thumb.tildacdn.com/tild3530-6435-4361-a430-323630633137/-/cover/264x264/center/center/-/format/webp/__2021-11-12__103809.png);
+          height: 290px;
+          width: calc(50% - 10px);
+          background-repeat: no-repeat;
+          background-size: cover;
+        }
+      }
+    }
+  }
+}

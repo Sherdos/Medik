@@ -1,0 +1,223 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block content %}
+    
+    
+    <main>
+        <section class="slider">
+            <div id="carouselExampleCaptions" class="carousel slide">
+                <div class="carousel-indicators">
+                    <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active"
+                        aria-current="true" aria-label="Slide 1"></button>
+                    <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1"
+                        aria-label="Slide 2"></button>
+                    <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2"
+                        aria-label="Slide 3"></button>
+                </div>
+                <div class="carousel-inner">
+                    <div class="carousel-item active">
+                        <img src="{% static 'src/images/carusel/carusel 1.jpg' %}" class="d-block w-100" alt="...">
+                        <div class="carousel-caption d-none d-md-block">
+                            <div id="slider__content">
+                                <h2>МЕДИЦИНСКИЙ ТУРИЗМ <br>
+                                    В КЫРГЫЗСТАНЕ</h2>
+                                <p>Медицинский центр Nova Clinic возложит на себя все заботы по организации Вашего
+                                    визита исходя из ваших пожеланий и предпочтений.</p>
+                                <button class="slider__btn"><a class="modalbox" href="#inline">Оставить заявку</a></button>
+                            </div>
+
+                        </div>
+                    </div>
+                    <div class="carousel-item">
+                        <img src="{% static 'src/images/carusel/carusel 1.jpg' %}" class="d-block w-100" alt="...">
+                        <div class="carousel-caption d-none d-md-block">
+                            <div id="slider__content">
+                                <h2>КОСМЕТОЛОГИЧЕСКИЕ <br> BEAUTY -процедуры</h2>
+                                <p>Мы спланируем программу Вашего визита и позаботимся об эффективной организации
+                                    вашего приезда по Вашему желанию.</p>
+                                    <button class="slider__btn"><a class="modalbox" href="#inline">Оставить заявку</a></button>
+                            </div>
+
+                        </div>
+                    </div>
+                    <div class="carousel-item">
+                        <img src="{% static 'src/images/carusel/carusel 1.jpg' %}" class="d-block w-100" alt="...">
+                        <div class="carousel-caption d-none d-md-block">
+                            <div id="slider__content">
+                                <h2>ПЛАСТИЧЕСКИЕ ОПЕРАЦИИ <br> В Оше</h2>
+                                <p>Комфортная палата гостиничного типа со всеми условиями.</p>
+                                <button class="slider__btn"><a class="modalbox" href="#inline">Оставить заявку</a></button>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+                <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions"
+                    data-bs-slide="prev">
+                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Previous</span>
+                </button>
+                <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions"
+                    data-bs-slide="next">
+                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Next</span>
+                </button>
+            </div>
+        </section>
+        <section id="about" class="about">
+            <div class="container">
+                <div class="about__content">
+                    <div class="about__content__left">
+                        <h2 class="about__content__left__title">О нашей клинике:</h2>
+                        <p>Двухэтажное помещение клиники площадью 1000 квадратных метров проектировалось и строилось по
+                            современным стандартам для пластической хирургии.</p>
+                        <br><br>
+                        <p>Стационар клиники Nova-Clinic включает
+                            2 высокотехнологичные операционные и 10 комфортабельных одно- и двухместных палат.</p>
+                    </div>
+                    <div class="about__content__right">
+                        <div class="about__content__right__images">
+                            <div class="one"></div>
+                            <div class="two"></div>
+                            <div class="three"></div>
+                            <div class="four"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="choose__us">
+            <div class="container">
+                <h2 class="choose__us__title">Почему выбирают нас:</h2>
+                <div class="choose__us__cards">
+                    <div class="choose__us__card">
+                        <img src="https://thumb.tildacdn.com/tild6538-6637-4234-b435-643634636465/-/resize/84x/-/format/webp/300x300_sign_ogo_-01.png' %}"
+                            alt="">
+                        <h3>Врачи</h3>
+                        <p>Команда высококвалифицированных<br>
+                            специалистов с опытом более 7 лет.</p>
+                    </div>
+                    <div class="choose__us__card">
+                        <img src="https://thumb.tildacdn.com/tild6538-6637-4234-b435-643634636465/-/resize/84x/-/format/webp/300x300_sign_ogo_-01.png' %}"
+                            alt="">
+                        <h3>Технологии и <br> инновации</h3>
+                        <p>Самые эффективные и безопасные методы коррекции и мировые стандарты.
+                            Наши центры оснащены медицинским оборудованием «экспертного класса».</p>
+                    </div>
+                    <div class="choose__us__card">
+                        <img src="https://thumb.tildacdn.com/tild6538-6637-4234-b435-643634636465/-/resize/84x/-/format/webp/300x300_sign_ogo_-01.png' %}"
+                            alt="">
+                        <h3>Рассрочка</h3>
+                        <p>Беспроцентная рассрочка на 3, 6 и 9 месяцев на все услуги клиники. Минимальный пакет
+                            документов и быстрое рассмотрение</p>
+                    </div>
+                    <div class="choose__us__card">
+                        <img src="https://thumb.tildacdn.com/tild6538-6637-4234-b435-643634636465/-/resize/84x/-/format/webp/300x300_sign_ogo_-01.png' %}"
+                            alt="">
+                        <h3>Безоп﻿ас﻿н﻿ость</h3>
+                        <p>Мы применяем исключительно сертифицированные медицинские материалы.</p>
+                    </div>
+                    <div class="choose__us__card">
+                        <img src="https://thumb.tildacdn.com/tild6538-6637-4234-b435-643634636465/-/resize/84x/-/format/webp/300x300_sign_ogo_-01.png' %}"
+                            alt="">
+                        <h3>Эко-подход</h3>
+                        <p>До и после каждой операции проходит подготовка и комплексная реабилитация, направленная на
+                            скорейшее восстановление пациента.Команда высококвалифицированных<br>
+                            специалистов с опытом более 7 лет.</p>
+                    </div>
+                    <div class="choose__us__card">
+                        <img src="https://thumb.tildacdn.com/tild6538-6637-4234-b435-643634636465/-/resize/84x/-/format/webp/300x300_sign_ogo_-01.png' %}"
+                            alt="">
+                        <h3>Комфорт</h3>
+                        <p>Постоперационное наблюдение и забота медицинского персонала 24/7 проходит в комфортабельной
+                            палате, трехразовым питанием и высоким уровнем сервиса</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="consultation">
+            <div class="container">
+                <div class="consultation__background"></div>
+                <div class="consultation__content">
+                    <h2>Преображение с сохранением вашей индивидуальности <br>
+                        от хирургов Nova Clinic</h2>
+                    <p>Мы делаем счастливыми более 900 человек <br> ежегодно!</p>
+                    <button>Первичная консультация</button>
+                </div>
+
+            </div>
+        </section>
+        <section id="services" class="services">
+            <div class="container">
+                <h2>Попул﻿ярные услуги клиники:</h2>
+                <div class="services__btns">
+                    
+                    {% for service in services %}
+                        <a href=""><button>{{service.title}}</button></a>
+                    {% endfor %}
+                        
+                </div>
+            </div>
+        </section>
+        <section id="before__after" class="before__after">
+            <div class="container">
+                <h2>Д﻿о/после</h2>
+                <h3>ФОТОГРАФИИ НАШИХ ПАЦИЕНТОВ ДО И ПОСЛЕ ОПЕРАЦИЙ</h3>
+                <div class="before__after__images">
+                    
+                    {% for a_b in after_before %}   
+                        <div class="before__after__image">
+                            <a href="{{a_b.image.url}}" data-fancybox="images" data-caption="My caption">
+                                <img src="{{a_b.image.url}}" alt="">
+                            </a>
+                        </div>
+                    {% endfor %}
+                        
+                </div>
+                <button><a href="{% url 'after_before' %}">СМОТРЕТЬ ВСЕ</a></button>
+            </div>
+        </section>
+        <section id="specialist" class="specialist">
+            <div class="container">
+                <h2>Коман﻿да наших специали﻿стов</h2>
+                <div class="specialist__slider">
+                    <swiper-container class="mySwiper" pagination="true" pagination-clickable="true" slides-per-view="3"
+                        space-between="30" free-mode="true">
+                        
+                        {% for memery in team %}
+                            <swiper-slide>
+                                <div class="specialist__card">
+                                    <img src="{{memery.image.url}}" alt="">
+                                    <h3>{{memery.name}}</h3>
+                                    <p>Отоларинголог (лор){{memery.experience}} лет опыта </p>
+                                    <button type="submit"><a class="modalbox" href="#inline">Записаться на прием</a></button>
+                                </div>
+                            </swiper-slide>
+                        {% endfor %}
+                            
+                    </swiper-container>
+                </div>
+            </div>
+        </section>
+        <section class="reviews">
+            <div class="container">
+                <h2>Отз﻿ывы наш﻿их пациентов</h2>
+                <swiper-container class="mySwiper" space-between="30" pagination="true" pagination-clickable="true">
+                    
+                    {% for feedback in feedbacks %}
+                    <swiper-slide>
+                        <div class="reviews__card">
+                            <p>{{feedback.text}}</p>
+                            <h3>{{feedback.name}}</h3>
+                            <span>{{feedback.date}}</span>
+                        </div>
+                    </swiper-slide>
+                    {% endfor %}
+                        
+                </swiper-container>
+            </div>
+        </section>
+{% endblock content %}
+
+    

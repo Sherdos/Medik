@@ -1,5 +1,5 @@
 from django.contrib import admin
-from service.models import Service, Parametr, Benefit, BeforAfter, Question, Appointment, Feedback, RequestOfLeave, Setting, Team
+from service.models import Service, Parametr, Benefit, BeforeAfter, Question, Appointment, Feedback, RequestOfLeave, Setting, Team, Sale
 
 
 class ParametrInline(admin.TabularInline):
@@ -10,8 +10,8 @@ class BenefitInline(admin.TabularInline):
     model = Benefit
     extra = 1
 
-class BeforAfterInline(admin.TabularInline):
-    model = BeforAfter
+class BeforeAfterInline(admin.TabularInline):
+    model = BeforeAfter
     extra = 1
 
 class QuestionInline(admin.TabularInline):
@@ -24,22 +24,21 @@ class ServiceAdmin(admin.ModelAdmin):
     list_filter = ['category']
     search_fields = ['title']
     prepopulated_fields = {'slug': ['title']}
-    inlines = [ParametrInline, BenefitInline, QuestionInline, BeforAfterInline]
+    inlines = [ParametrInline, BenefitInline, QuestionInline, BeforeAfterInline]
     save_on_top = True
     save_as = True
     
 @admin.register(Appointment)
 class AppointmentAdmin(admin.ModelAdmin):
-    list_filter = ['doctor']
     search_fields = ['name']
 
 @admin.register(Feedback)
 class FeedbackAdmin(admin.ModelAdmin):
     list_filter = ['date']
     search_fields = ['name']
-    
 admin.site.register(RequestOfLeave)  
 admin.site.register(Setting)  
+admin.site.register(Sale)  
 
 @admin.register(Team)
 class TeamAdmin(admin.ModelAdmin):

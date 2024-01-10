@@ -11,8 +11,8 @@ class Service(models.Model):
     
     title = models.CharField('название услуги', max_length=100)
     slug = models.SlugField('путь', max_length=100)
-    description = models.TextField('описание')
-    advantage = models.TextField('приемущества')
+    description = models.TextField('описание', blank=True, null=True)
+    advantage = models.TextField('приемущества', blank=True, null=True)
     image = models.ImageField('фото', upload_to='service_image/')
     category = models.CharField('категория',choices=CATEGORY, max_length=40 )
     
@@ -32,7 +32,7 @@ class Service(models.Model):
     
 class Parametr(models.Model):
     title = models.CharField('название', max_length=100)
-    description = models.CharField('информация', max_length=150)
+    description = models.CharField('информация', max_length=150, blank=True, null=True)
     service = models.ForeignKey(Service, models.CASCADE, related_name='parametr_service')
     
     def __str__(self):
@@ -66,7 +66,7 @@ class Question(models.Model):
         verbose_name = 'Вопрос'
         verbose_name_plural = 'Вопросы'
     
-class BeforAfter(models.Model):
+class BeforeAfter(models.Model):
     image = models.ImageField('фото', upload_to='befor_after/')
     service = models.ForeignKey(Service, models.CASCADE, related_name='image_af_bef_service')
 
@@ -94,7 +94,7 @@ class Team(models.Model):
 class Feedback(models.Model):
     
     name = models.CharField('имя', max_length=50)
-    text = models.TextField('отзыв')
+    text = models.TextField('отзыв', blank=True, null=True)
     phone = models.CharField('номер телефона', max_length=50)
     date = models.DateField('дата', auto_now_add=True)
     
@@ -119,7 +119,6 @@ class Appointment(models.Model):
     name = models.CharField('имя', max_length=50)
     email = models.EmailField('почта')
     phone = models.CharField('номер телефона', max_length=50)
-    doctor = models.ForeignKey(Team, models.CASCADE, related_name='doctor_appointment')
      
     def __str__(self):
         return f'Запись на прием  {self.name} к {self.doctor.name}'
@@ -151,7 +150,7 @@ class Sale(models.Model):
     
     title = models.CharField('описание', max_length=150)
     image = models.ImageField('фото', upload_to='sale_image/')
-    description = models.CharField('информация', max_length=150)
+    description = models.CharField('информация', max_length=150, blank=True, null=True)
     price = models.SmallIntegerField('цена')
     first_price = models.SmallIntegerField('первоначальная цена')
 

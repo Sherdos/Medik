@@ -1,0 +1,42 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block content %}
+    
+    <main>
+        <section class="banner">
+            <div class="container">
+                <div class="banner__content">
+                    <h1>
+                        НОВОГОДНЯЯ АКЦИЯ <br>
+                        ОТ NOVA CLINIC
+                    </h1>
+                    <h3>
+                        На пакеты «Mommy Makeover» <br>
+                        Предложение действует до 10 февраля
+                    </h3>
+                </div>
+
+            </div>
+        </section>
+        <section class="stock">
+            <div class="container">
+                <h2>Встречайте новый год с новым обликом! <br> Успейте забронировать пакеты Mommy <br> 
+                Makeover по выгодной цене</h2>
+                <div class="stock__cards">
+                    
+                    {% for sale in sales %}
+                        <div class="stock__card">
+                            <img src="{{sale.image.url}}" alt="">
+                            <h4>{{sale.title}}</h4>
+                            <p class="stock__price">{{sale.price}}$</p>
+                            <p class="price"><del>{{sale.first_price}}$</del></p>
+                            <p>{{sale.description}}</p>
+                        </div>
+                    {% endfor %}
+                        
+                    
+                </div>
+            </div>
+        </section>
+    {% endblock content %}

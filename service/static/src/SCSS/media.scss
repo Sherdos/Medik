@@ -1,0 +1,322 @@
+@media screen and (max-width: 1200px) {
+  .container {
+    max-width: 960px;
+  }
+  .header__top__menu li .logo {
+    width: 330px;
+    height: 65px;
+  }
+  .header__nav__menu li a {
+    font-size: 15px;
+  }
+  .contacts iframe {
+    width: 466px;
+  }
+  .contacts__content .contacts__items h3 {
+    padding: 25px 0;
+  }
+}
+@media screen and (max-width: 992px) {
+  .container {
+    max-width: 770px;
+  }
+  body {
+    z-index: 1;
+  }
+  .footer__menu {
+    flex-wrap: wrap;
+  }
+  .header {
+    .header__container {
+      position: relative;
+      // background-color: #fff;
+    }
+    .container {
+      max-width: none;
+    }
+    .header__relative {
+      height: 550px;
+      position: absolute;
+      z-index: 1;
+      inset: 0;
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+      background-color: #fff;
+      top: -550px;
+      transition: all 0.3s;
+    }
+    &__menu-mobile {
+      padding-right: 50px;
+      display: flex;
+      justify-content: end;
+      align-items: center;
+      position: relative;
+      z-index: 2;
+      .mobile-btn {
+        display: flex;
+        align-items: center;
+        position: relative;
+        z-index: 5;
+        width: 30px;
+        height: 50px;
+        cursor: pointer;
+        //background-color: #fff;
+      }
+      .mobile-btn span,
+      .mobile-btn span::before,
+      .mobile-btn span::after {
+        content: "";
+        display: block;
+        background-color: #fff;
+        height: 2px;
+        position: absolute;
+        width: 100%;
+        transition: all 0.3s;
+      }
+      .mobile-btn span::after {
+        bottom: -8px;
+      }
+      .mobile-btn span::before {
+        top: -9px;
+      }
+      .mobile-btn.active-btn span {
+        background-color: transparent;
+      }
+      // .mobile-btn.active-btn span::after {
+      //   bottom: -3px;
+      //   transform: rotate(45deg);
+      // }
+      // .mobile-btn.active-btn span::before {
+      //   top: -4px;
+      //   transform: rotate(-45deg);
+      // }
+      .mobile-btn.active-btn span::after {
+        top: -3px;
+        left: 0;
+        transform: rotate(45deg);
+      }
+
+      .mobile-btn.active-btn span::before {
+        top: -3px;
+        right: 0;
+        transform: rotate(-45deg);
+      }
+    }
+    &__top {
+      padding: 0px;
+      &__menu {
+        display: flex;
+        flex-direction: column;
+      }
+      &-list.none {
+        display: none;
+      }
+    }
+    &__nav {
+      &__menu {
+        flex-direction: column;
+        row-gap: 14px;
+      }
+      &-list {
+        display: block;
+      }
+    }
+  }
+  .header__relative.active {
+    top: -1px;
+  }
+  .about__content__left h2 {
+    padding: 0;
+  }
+  .about__content__left p {
+    margin-top: 12px;
+  }
+  .about__content__left br {
+    display: none;
+  }
+  .about__content__left p:last-child {
+    margin-top: 50px;
+  }
+  .contacts__content .contacts__maps {
+    width: 100%;
+  }
+  .contacts__maps {
+    display: flex;
+    justify-content: center;
+  }
+  .contacts__content {
+    row-gap: 20px;
+  }
+}
+@media screen and (max-width: 768px) {
+  .container {
+    max-width: 540px;
+  }
+  .contacts__content .contacts__items,
+  .contacts__content .contacts__maps,
+  .about__content__left,
+  .about__content__right {
+    width: 100%;
+  }
+  .about__content__left p {
+    padding: 0;
+  }
+  .slider img,
+  .slider #slider__content {
+    height: 500px;
+  }
+  .slider h2 {
+    margin-top: 20px !important;
+    font-size: 35px;
+    margin: 0;
+  }
+  .slider p {
+    margin-bottom: 10px;
+    font-size: 22px;
+  }
+  .choose__us__cards div {
+    width: 100%;
+  }
+  .choose__us__cards p {
+    padding: 0;
+  }
+  .before__after__image {
+    width: calc(50% - 10px);
+  }
+  .specialist__card button {
+    padding: 10px 23px;
+  }
+  .specialist__card a {
+    font-size: 15px;
+  }
+  .specialist__card img {
+    width: 100%;
+  }
+  .specialist__card h3 {
+    padding: 10px 0;
+    font-size: 17px;
+  }
+  .stock__cards {
+    row-gap: 15px;
+    justify-content: center;
+  }
+  .stock__card {
+    width: calc(50% - 20px);
+  }
+
+  // .banner__content h1 {
+  //   font-size: 80px !important;
+  // }
+}
+@media screen and (max-width: 576px) {
+  .container {
+    padding: 0 10px;
+    max-width: 100%;
+  }
+  .d-none {
+    display: block !important;
+  }
+  .header__menu-mobile {
+    padding-right: 10px;
+  }
+  .slider h2 {
+    font-size: 19px;
+  }
+  .slider p {
+    font-size: 15px;
+  }
+  .slider .slider__btn {
+    margin-top: 10px;
+    padding: 15px 35px;
+  }
+  .reviews__card {
+    padding: 20px;
+  }
+  .contacts__content {
+    justify-content: center;
+  }
+  .contacts__items {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    row-gap: 10px;
+    text-align: center;
+  }
+  .contacts__content .contacts__items h3 {
+    text-align: center;
+  }
+  .banner {
+    height: 500px;
+  }
+  .banner__content h1 {
+    font-size: 35px;
+    margin-bottom: 15px;
+  }
+  .banner__content h3 {
+    font-size: 18px;
+  }
+  .stock h2 {
+    font-size: 18px;
+  }
+  .stock__card {
+    width: calc(100% - 20px);
+  }
+  .footer__menu {
+    flex-direction: column;
+    align-items: center;
+    row-gap: 15px;
+  }
+  .footer a {
+    font-size: 15px;
+  }
+}
+@media screen and (max-width: 425px) {
+  .about__content__left h2,
+  .choose__us__title,
+  .price h2,
+  .specialist h2,
+  .contacts__content .contacts__items h3 {
+    font-size: 27px;
+  }
+  .consultation__content h2 {
+    font-size: 25px;
+    margin-bottom: 10px;
+  }
+  .consultation__background,
+  .consultation__content {
+    height: 460px;
+  }
+  .services__btns button {
+    font-size: 13px;
+  }
+  .specialist__card img {
+    height: auto;
+  }
+  .reviews {
+    padding: 15px;
+  }
+  .contacts iframe {
+    width: 100%;
+  }
+  .header__top__menu li .logo {
+    width: 260px;
+    height: 65px;
+  }
+  .about__content__left {
+    padding: 0;
+  }
+  .about {
+    padding-top: 25px !important;
+    padding: 10px;
+  }
+  .reviews__card p {
+    font-size: 15px;
+  }
+  .footer a {
+    font-size: 14px;
+  }
+  .footer p {
+    font-size: 12px;
+  }
+}

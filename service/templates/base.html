@@ -1,0 +1,104 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Медицинский центр "Клиника Медлайн" | МЦ "Медлайн" в городе Ош🔎</title>
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.7/jquery.fancybox.min.css" />
+    <link rel="stylesheet" href="{% static 'src/Libs/fancybox/jquery.fancybox.css' %}">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="stylesheet" href="{% static 'node_modules/bootstrap/dist/css/bootstrap.min.css' %}">
+    <link rel="stylesheet" href="{% static 'src/CSS/style.css' %}">
+</head>
+
+<body>
+    {% include 'components/header.html' %}
+
+
+{% block content %}
+    
+{% endblock content %}
+
+<section id="contacts" class="contacts">
+    <div class="container">
+        <div class="contacts__content">
+            <div class="contacts__items">
+                <h3>Наши контакт﻿ы :</h3>
+                <h4>Телефоны:</h4>
+                <p>{{setting.phone}}</p>
+                <h4>Электронная почта:</h4>
+                <p>{{setting.email}}</p>
+                <h4> Режим работы:</h4>
+                <p>{{setting.operating_mode}}</p> 
+                <h4>Адрес</h4>
+                <p>{{setting.address}}</p>
+                <div class="networks">
+                    <a href="{{setting.instagram}}"><i class="fa-brands fa-instagram"></i></a>
+                    <a href="{{setting.fecebook}}"><i class="fa-brands fa-facebook"></i></a>
+                    <a href="{{setting.whatsapp}}"><i class="fa-brands fa-whatsapp"></i></a>
+                </div>
+            </div>
+            <div class="contacts__maps">
+                <a class="dg-widget-link"
+                    href="http://2gis.kg/osh/firm/70000001067959640/center/72.805378,40.523168/zoom/16?utm_medium=widget-source&utm_campaign=firmsonmap&utm_source=bigMap">Посмотреть
+                    на карте Оша</a>
+                <div class="dg-widget-link"><a
+                        href="http://2gis.kg/osh/center/72.805378,40.523168/zoom/16/routeTab/rsType/bus/to/72.805378,40.523168╎Archa?utm_medium=widget-source&utm_campaign=firmsonmap&utm_source=route">Найти
+                        проезд до Archa</a></div>
+                <script charset="utf-8" src="https://widgets.2gis.com/js/DGWidgetLoader.js"></script>
+                <script
+                    charset="utf-8">new DGWidgetLoader({ "width": 600, "height": 400, "borderColor": "#a3a3a3", "pos": { "lat": 40.523168, "lon": 72.805378, "zoom": 16 }, "opt": { "city": "osh" }, "org": [{ "id": "70000001067959640" }] });</script>
+                <noscript style="color:#c00;font-size:16px;font-weight:bold;">Виджет карты использует
+                    JavaScript. Включите его в настройках вашего браузера.</noscript>
+            </div>
+        </div>
+
+    </div>
+</section>
+<section class="modal">
+    <div id="inline">
+        <h2>Оставьте телефоный номер</h2>
+    
+        <form id="" action="{% url 'add_request_of_leave' %}" method="post">
+            {% csrf_token %}
+            <label for="phone">Номер телефона</label>
+            <input type="text" name="phone" class="txt">
+            <button id="send" type="submit">Отправить</button>
+        </form>
+    </div>
+</section>
+
+<section class="modal">
+    <div id="request">
+        <h2>Отправка сообщения</h2>
+        <form id="contact"  action="{% url 'add_feedback' %}" method="post">
+            {% csrf_token %}
+            
+            {% for f in form %}
+            <label for="{{f.id_for_label}}">{{f.label}}</label>
+                {{f}}
+            {% endfor %}
+                
+            
+        <button id="send" type="submit">Отправить</button>
+        </form>
+    </div>
+</section>
+
+</main>
+
+{% include 'components/footer.html' %}
+
+
+<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.8/jquery.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-element-bundle.min.js"></script>
+<script src="{% static 'src/Libs/fancybox/jquery.fancybox.js' %}"></script>
+<script src="{% static 'node_modules/bootstrap/dist/js/bootstrap.min.js' %}"></script>
+<script src="{% static 'src/JS/main.js' %}"></script>
+</body>
+
+</html>
+    

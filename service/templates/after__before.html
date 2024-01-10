@@ -1,0 +1,26 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block content %}
+    
+    <main>
+        <section class="before__after">
+            <div class="container">
+                <h2>Д﻿о/после</h2>
+                <h3>ФОТОГРАФИИ НАШИХ ПАЦИЕНТОВ ДО И ПОСЛЕ ОПЕРАЦИЙ</h3>
+                <div class="before__after__images">
+                    
+                    {% for a_b in after_before %}
+                    
+                    <div class="before__after__image">
+                        <a href="{{a_b.image.url}}" data-fancybox="images" data-caption="My caption">
+                            <img src="{{a_b.image.url}}" alt="">
+                        </a>
+                    </div>
+                    {% endfor %}
+                        
+                </div>
+            </div>
+        </section>
+    </main>
+    {% endblock content %}

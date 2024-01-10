@@ -1,0 +1,36 @@
+{% load static %}
+<header class="header">
+    <div class="header__menu-mobile">
+        <div class="mobile-btn">
+            <span></span>
+        </div>
+    </div>
+    <div class="header__container container">
+        <div class="header__relative">
+            <div class="header__top">
+                <ul class="header__top__menu">
+                    <li class="header__top-list none">{{setting.address}}</li>
+                    <li class="header__top-list first"><a href="{% url 'index' %}"><img class="logo" src="{% static 'src/images/logo.svg' %}" alt=""></li></a>
+                    <li class="header__top-list none">{{setting.operating_mode}}</li>
+                </ul>
+            </div>
+            <nav class="header__nav">
+                <ul class="header__nav__menu">
+                    <li><a href="{% url 'index' %}">ГЛАВНАЯ</a></li>
+                    <li><a href="{% url 'index' %}#about">О НАС</a></li>
+                    <li><a href="{% url 'index' %}#services">УСЛУГИ</a></li>
+                    <li><a href="{% url 'sale' %}">АКЦИИ</a></li>
+                    <li><a href="{% url 'after_before' %}">ДО/ПОСЛЕ</a></li>
+                    <li><a href="{% url 'index' %}#specialist">ВРАЧИ</a></li>
+                    <li><a href="{% url 'price_list' %}">ПРАЙС-ЛИСТ</a></li>
+                    <li><a href="{% url 'index' %}#carouselExampleCaptions">МЕДИЦИНСКИЙ ТУРИЗМ</a></li>
+                    <li><a href="{% url 'index' %}#contacts">КОНТАКТЫ</a></li>
+                    <div class="header__nav-address">
+                        <li class="header__nav-list">​ЖЕНИШБЕКА ШАМШИЕВА, 2/1</li>
+                        <li class="header__nav-list">08:30 - 17:30</li>
+                    </div>
+                </ul>
+            </nav>
+        </div>
+    </div>
+</header>

@@ -28,9 +28,9 @@ class ServiceAdmin(admin.ModelAdmin):
     save_on_top = True
     save_as = True
     
-@admin.register(Appointment)
-class AppointmentAdmin(admin.ModelAdmin):
-    search_fields = ['name']
+# @admin.register(Appointment)
+# class AppointmentAdmin(admin.ModelAdmin):
+#     search_fields = ['name']
 
 @admin.register(Feedback)
 class FeedbackAdmin(admin.ModelAdmin):
